@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# IDE
+.vscode/
+
+# Environment variables
+.env
+.env.*
+
+# Cache
+.pytest_cache/
+.mypy_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local databases
+database/*.db
+database/*.sqlite
+database/*.sqlite3
+
+# Generated exports
+exports/
+
+src/models/model.pkl

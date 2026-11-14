@@ -1,0 +1,44 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" role="img">
+  <title>Animated character</title>
+  <desc>Simple floating line character with animated accent lines</desc>
+  <defs>
+    <style><![CDATA[
+      .line { stroke:#4f46e5; stroke-width:3; stroke-linecap:round; stroke-dasharray:6 8; animation: dash 4s linear infinite; }
+      .stroke { stroke:#4f46e5; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; fill:none; }
+      .blob { fill:#3b82f6; fill-opacity:.14; }
+      .bob { animation: bob 5s ease-in-out infinite; transform-origin: 200px 200px; }
+      @keyframes dash { to { stroke-dashoffset:-140; } }
+      @keyframes bob { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
+    ]]></style>
+  </defs>
+
+  <circle class="blob" cx="200" cy="210" r="150" />
+
+  <!-- floating lines -->
+  <line class="line" x1="80" y1="110" x2="120" y2="110" />
+  <line class="line" x1="300" y1="90" x2="340" y2="90" />
+  <line class="line" x1="70" y1="250" x2="110" y2="250" />
+  <line class="line" x1="320" y1="260" x2="360" y2="260" />
+
+  <!-- character -->
+  <g class="bob">
+    <!-- head -->
+    <circle class="stroke" cx="200" cy="150" r="22" />
+    <!-- body -->
+    <path class="stroke" d="M200 172 L200 225" />
+    <!-- left arm -->
+    <path class="stroke" d="M200 185 L178 200" />
+    <!-- right arm with phone -->
+    <path class="stroke" d="M200 185 L220 175" />
+    <g transform="rotate(180 228 173)">
+      <rect x="220" y="160" width="16" height="26" rx="3" ry="3" fill="#4f46e5" />
+      <circle cx="226" cy="183" r="2" fill="#ffffff" />
+    </g>
+    <!-- legs -->
+    <path class="stroke" d="M200 225 L184 275" />
+    <path class="stroke" d="M200 225 L218 275" />
+    <!-- shoes -->
+    <path class="stroke" d="M178 275 L190 280" />
+    <path class="stroke" d="M212 275 L224 280" />
+  </g>
+</svg>
